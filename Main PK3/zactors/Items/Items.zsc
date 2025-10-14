@@ -457,7 +457,7 @@ Class Energy10 : Health replaces Stimpack
     States
     {
       Spawn:
-	    TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
+	    TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,1.0);
         NRGA A 3 BRIGHT A_SetScale(0.147); 
 		NRGA B 3 BRIGHT A_SetScale(0.148);
  		NRGA C 3 BRIGHT A_SetScale(0.149);
@@ -500,7 +500,7 @@ Class Energy10_Dropped : Energy10
         TNT1 A 1;
         TNT1 A 1 ACS_ExecuteAlways(594,0,30);
       Spawn1:
-        TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
+        TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,1.0);
 		TNT1 A 0 A_JumpIfInventory("Health100",31,"RemoveCheck");
         TNT1 A 0 A_GiveInventory("Health100",1);
         NRGA A 3 BRIGHT A_SetScale(0.147);
@@ -587,7 +587,7 @@ Class Energy25 : Health replaces Medikit
     States
     {
       Spawn:
-	    TNT1 A 0 NoDelay A_StartSound("Energy25/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
+	    TNT1 A 0 NoDelay A_StartSound("Energy25/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,1.0);
         NRGB A 3 BRIGHT A_SetScale(0.247);
 		NRGB B 3 BRIGHT A_SetScale(0.248);
  		NRGB C 3 BRIGHT A_SetScale(0.249);
@@ -631,7 +631,7 @@ Class Energy25_Dropped : Energy25
         TNT1 A 1;
         TNT1 A 1 ACS_ExecuteAlways(594,0,30);
       Spawn1:
-        TNT1 A 0 NoDelay A_StartSound("Energy25/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
+        TNT1 A 0 NoDelay A_StartSound("Energy25/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,1.0);
 		TNT1 A 0 A_JumpIfInventory("Health100",31,"RemoveCheck");
         TNT1 A 0 A_GiveInventory("Health100",1);
         NRGB A 3 BRIGHT A_SetScale(0.247);
@@ -718,7 +718,7 @@ Class Energy50 : Health
     States
     {
       Spawn:
-	    TNT1 A 0 NoDelay A_StartSound("Energy50/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
+	    TNT1 A 0 NoDelay A_StartSound("Energy50/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,1.0);
         NRGC A 3 BRIGHT A_SetScale(0.307);
 		NRGC B 3 BRIGHT A_SetScale(0.308);
  		NRGC C 3 BRIGHT A_SetScale(0.309);
@@ -767,7 +767,7 @@ Class Energy100 : Health
     States
     {
       Spawn:
-	    TNT1 A 0 NoDelay A_StartSound("Energy100/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
+	    TNT1 A 0 NoDelay A_StartSound("Energy100/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,1.0);
         NRGD A 3 BRIGHT A_SetScale(0.347);
 		NRGD B 3 BRIGHT A_SetScale(0.348);
  		NRGD C 3 BRIGHT A_SetScale(0.349);
