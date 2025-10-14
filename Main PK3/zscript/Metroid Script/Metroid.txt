@@ -1,0 +1,115 @@
+// Executes at map start. Creates a camera actor for every player
+// (not necessary, but just for the sake of completeness, it's
+// multiplayer-compatible):
+class MorphCameraHandler : EventHandler
+{
+	override void PlayerSpawned(PlayerEvent e)
+	{
+		let ppawn = players[e.PlayerNumber].mo;
+		// Only spawn camera for real players, not voodoo dolls:
+		if (ppawn && ppawn.player && ppawn.player.mo == ppawn)
+		{
+			// spawn camera, set this player pawn as its viewer:
+			let c = MorphCamera(Actor.Spawn('MorphCamera', ppawn.pos));
+			if (c)
+			{
+				c.viewer = ppawn;
+			}
+		}
+	}
+}
+
+// The actual camera actor:
+class MorphCamera : Actor
+{
+	bool enabled;
+	PlayerPawn viewer;
+	DynamicValueInterpolator rollIntr;
+
+	Default
+	{
+		+NOINTERACTION
+		+NOBLOCKMAP
+		+CAMFOLLOWSPLAYER
+	}
+
+	// Simple utility function to map a value from one possible range to another:
+	static clearscope double LinearMap(double val, double source_min, double source_max, double out_min, double out_max, bool clampit = false) 
+	{
+		double sourceDiff = source_max - source_min;
+		if (sourceDiff == 0)
+		{
+			return 0;
+		}
+		double d = (val - source_min) * (out_max - out_min) / sourceDiff + out_min;
+		if (clampit)
+		{
+			double truemax = out_max > out_min ? out_max : out_min;
+			double truemin = out_max > out_min ? out_min : out_max;
+			d = Clamp(d, truemin, truemax);
+		}
+		return d;
+	}
+
+	// This function enables/disables the camera. Currently it's triggered by player
+	// pressing the chasecam button, but it could be done differently:
+	void ToggleMorphCamera(bool enable = true)
+	{
+		enabled = enable;
+		// Create an interpolator for tilting. The values could be adjusted for
+		// more or less aggressive tilting:
+		if (!rollIntr)
+		{
+			rollIntr = DynamicValueInterpolator.Create(0, 0.1, 128, 32767.0 / 32);
+		}
+		// When enabled, remove player's bobbing and set camera to
+		// this actor:
+		if (enabled)
+		{
+			viewer.viewbob = 0;
+			viewer.player.camera = self;
+			// Move the camera back and upward a bit (first value is forward/back,
+			// second is left/right, third is up/down):
+			self.SetViewPos((-112, 0, 16));
+		}
+		// When disabled, revert the camera and bobbing:
+		else
+		{
+			self.A_SetViewRoll(0);
+			self.SetViewPos((0, 0, 0));
+			rollIntr.Reset(0);
+			viewer.viewbob = viewer.default.viewbob;
+			viewer.player.camera = viewer;
+		}
+	}
+
+	override void Tick()
+	{
+		// Viewer must always be non-null:
+		if (!viewer)
+		{
+			self.Destroy();
+			return;
+		}
+
+		// Update position to match viewer's:
+		SetOrigin(viewer.pos, true);
+
+		// This is the trigger: when player tries to activate
+		// chasecam, this camera is activated instead and
+		// chasecam is disabled:
+		if (viewer.player.cheats & CF_CHASECAM)
+		{
+			ToggleMorphCamera(!enabled);
+			viewer.player.cheats &= ~CF_CHASECAM;
+		}
+
+		// While enabled, interpolate player's current sidemove
+		// values and convert them to visual tilt:
+		if (enabled)
+		{
+			rollIntr.Update(viewer.player.cmd.sidemove);
+			A_SetViewRoll(LinearMap(rollIntr.GetValue(), -32767, 32767 , -16, 16, true), SPF_INTERPOLATE);
+		}
+	}
+}

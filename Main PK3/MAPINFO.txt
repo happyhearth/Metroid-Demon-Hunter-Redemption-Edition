@@ -1,0 +1,125 @@
+DoomEdNums
+{
+	7085 = "VariaSuitPickup"
+	7086 = "GrappleBeamPickup"
+	7806 = "GravitySuitPickup"
+	17520 = "MissileAmmo"
+	17521 = "MissileTankPickup"
+	17522 = "SuperMissileTankPickup"
+	17523 = "PowerBombTankPickup"
+	17524 = "SuperMissileAmmo"
+	17525 = "PowerBombAmmo"
+	17526 = "Energy10"
+	17527 = "Energy25"
+	17528 = "Energy100"
+	17529 = "EnergyTankPickup"
+	17530 = "SpaceJumpPickup"
+	17531 = "SpeedBoosterPickup"
+	17532 = "RawEnergy"
+	17533 = "SpazerBeamPickup"
+	17534 = "PlasmaBeamPickup"
+	17535 = "WaveBeamPickup"
+	17536 = "IceBeamPickup"
+	17537 = "LongBeamPickup"
+	17538 = "DoomCannonPickup"
+	17541 = "DoomCannonAlwaysPickup"
+	17542 = "ChargeBeamPickup"
+	18665 = "PowerMissilePickup"
+	18666 = "WaveMissilePickup"
+	18667 = "SolarFlarePickup"
+	18668 = "IceSpreaderPickup"
+	18669 = "NovaFlashPickup"
+	18670 = "WideShotPickup"
+	18671 = "HyperBeamPickup"
+	18672 = "ChainsawBeamPickup"
+	18700 = "MorphBall"
+	18701 = "BombPickup"
+	18702 = "BoostBallPickup"
+	18703 = "HiJumpPickup"
+	18704 = "ScanVisor"
+	18705 = "RedEnergyTankPickup"
+	18706 = "Energy50"
+}
+
+gameinfo
+{
+	infopage = "METRTIP0", "CREDIT"
+	AddEventHandlers = "GHookHandler"
+	AddEventHandlers = "ScanEvent"
+	AddEventHandlers = "MonsterDrops"
+	AddEventHandlers = "MetroidHandler"
+	AddEventHandlers = "MorphCameraHandler" //more can be added separated by a comma
+}
+
+
+
+map TITLEMAP "Title Map"
+{
+    next = "TITLEMAP"
+    SKY1 = "HEXSKY1A", 1.5
+    SKY2 = "HEXSKY1B", 1.5
+    Lightning
+    SmoothLighting
+}
+
+skill baby // Heh.
+{
+    ACSReturn = 0
+    EasyBossBrain
+    SpawnFilter = Baby // Hehhhh.
+    DamageFactor = 0.75
+    AmmoFactor = 2
+    Name = "Hatchling"
+    MustConfirm = "$CONFIRM_BABY"
+}
+
+skill easy
+{
+    ACSReturn = 1
+    EasyBossBrain
+    SpawnFilter = Easy
+    Name = "Space Cadet"
+    MustConfirm = "$CONFIRM_EASY"
+}
+
+skill normal
+{
+    ACSReturn = 2
+    SpawnFilter = Normal
+    Name = "Bounty Hunter"
+    MustConfirm = "$CONFIRM_NORMAL"
+}
+
+skill hard
+{
+    ACSReturn = 3
+    SpawnFilter = Hard
+    Name = "Chozo Warrior"
+    MustConfirm = "$CONFIRM_HARD"
+}
+
+skill nightmare
+{
+    ACSReturn = 4
+    FastMonsters
+    DamageFactor = 1.25
+    SpawnFilter = Nightmare
+    Name = "Galactic Protector"
+    MustConfirm = "$CONFIRM_NIGHTMARE"
+}
+
+//skill ohgodhelpme
+//{
+//    ACSReturn = 5
+//   FastMonsters
+//    DisableCheats
+//    RespawnTime = 30
+//    RespawnLimit = 3
+//    DamageFactor = 1.5
+    //MonsterHealth = 1.25
+//    Aggressiveness = 1.0
+//    SpawnFilter = Nightmare
+//    Name = "   "
+//    //ReplaceActor = "Medikit", "Stimpack"
+//    MustConfirm = "$CONFIRM_OHGODHELPME"
+//}
