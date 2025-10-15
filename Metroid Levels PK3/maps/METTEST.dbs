@@ -19,28 +19,28 @@ maps
 			
 			resource0
 			{
-				type = 0;
-				location = "E:\\ZDL_3-1.1_Win_x86\\DOOM2.WAD";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 0;
-				requiredarchives = "";
-			}
-			
-			resource1
-			{
 				type = 2;
-				location = "E:\\GZDoom 4.10.0\\gzdoom.pk3";
+				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\gzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 1;
 				requiredarchives = "gzdoom";
 			}
 			
+			resource1
+			{
+				type = 0;
+				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\DOOM2.WAD";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+			
 			resource2
 			{
-				type = 2;
-				location = "E:\\Downloads\\mdh-experimental-dec2022 (1)\\Metroid - Demon Hunter Main.pk3";
+				type = 1;
+				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Main PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -49,16 +49,26 @@ maps
 			
 			resource3
 			{
-				type = 2;
-				location = "E:\\Downloads\\mdh-experimental-dec2022 (1)\\Metroid - Demon Hunter Levels.pk3";
+				type = 1;
+				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Metroid Levels PK3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+			
+			resource4
+			{
+				type = 1;
+				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Scans PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 764.2419f;
-		viewpositionx = 5722.784f;
+		viewpositiony = 9.448289f;
+		viewpositionx = -283.9971f;
 		
 		testprecommand
 		{
@@ -78,11 +88,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 16;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.1565332f;
+		viewscale = 2.470643f;
 		
 		reloadresourceprecommand
 		{
@@ -93,31 +103,6 @@ maps
 		defaulttoptexture = "YELROCK1";
 		overridebottomtexture = false;
 		defaultbottomtexture = "YELROCK1";
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 12479;
-				firstvisibleline = 606;
-				activetab = true;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-			}
-		}
 		defaultfloortexture = "BRINROCK";
 		overrideceilheight = false;
 		overridebrightness = false;
@@ -138,6 +123,31 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 12479;
+				firstvisibleline = 606;
+				activetab = true;
+			}
+			
+			document1
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+			}
 		}
 	}
 }
