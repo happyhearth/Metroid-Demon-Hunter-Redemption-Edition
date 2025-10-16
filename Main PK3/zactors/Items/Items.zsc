@@ -22,9 +22,9 @@ Class MissileAmmo : Ammo replaces Shell
 		//$Category Metroid
 		Inventory.PickupMessage "Picked up a Missile.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
-		Inventory.Amount 1;
+		Inventory.Amount 2;
 		Inventory.MaxAmount 5; //Originally 5
-		Ammo.BackpackAmount 1;
+		Ammo.BackpackAmount 2;
 		Ammo.BackpackMaxAmount 5;
 		Inventory.Icon "MPKUA0";
 		+NOGRAVITY;
