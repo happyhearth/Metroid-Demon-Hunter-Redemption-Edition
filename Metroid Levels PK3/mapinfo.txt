@@ -92,3 +92,9 @@ map ARRIVAL "Hexhi Wilds - Arrival" // By R4L
     music = "M_PIRAT" // Kenji Yamamoto - VS Dark Samus
     SmoothLighting
 }*/
+map RLCSTA "Relic Station" //By Happy Heart
+{
+   next = "METTEST"
+   music = "RLCSTA"
+   SKY1 = "HEXSKY01"
+}

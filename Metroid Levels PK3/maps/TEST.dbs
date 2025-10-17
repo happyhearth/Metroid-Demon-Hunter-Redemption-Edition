@@ -43,7 +43,7 @@ maps
 				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Main PK3";
 				option1 = 0;
 				option2 = 0;
-				notfortesting = 1;
+				notfortesting = 0;
 				requiredarchives = "";
 			}
 			
@@ -53,7 +53,7 @@ maps
 				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Metroid Levels PK3";
 				option1 = 0;
 				option2 = 0;
-				notfortesting = 1;
+				notfortesting = 0;
 				requiredarchives = "";
 			}
 			
@@ -63,12 +63,12 @@ maps
 				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Scans PK3";
 				option1 = 0;
 				option2 = 0;
-				notfortesting = 1;
+				notfortesting = 0;
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 182.0193f;
-		viewpositionx = 903.8987f;
+		viewpositiony = 119.7835f;
+		viewpositionx = 1131.255f;
 		
 		testprecommand
 		{
@@ -88,11 +88,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 128;
+			gridsize = 32;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.2819099f;
+		viewscale = 1.046711f;
 		
 		reloadresourceprecommand
 		{
