@@ -43,7 +43,7 @@ $playersound      Hunter   male    *grunt          QUIET
 $playeralias      Hunter   male    *land           samus/land
 $playersound      Hunter   male    *usefail        SAMNOPE // Taken from Smash Bros. Brawl
 $playersound      Hunter   male    *taunt          SAMTAUNT // Taken from Smash Bros. Brawl
-$playersound      Hunter   male    *jump           QUIET
+$playersound      Hunter   male    *jump           SAMJMP1 // Taken from Metroid Prime
 
 $playersound      MoBall   male    *death          SAMDEATH
 $playersounddup   MoBall   male    *xdeath         *death
@@ -59,7 +59,7 @@ $playersound      MoBall   male    *grunt          QUIET
 $playeralias      MoBall   male    *land           samus/land
 $playersound      MoBall   male    *usefail        BALNOPE // Taken from Smash Bros. Brawl
 $playersound      MoBall   male    *taunt          BALTAUNT // Taken from Smash Bros. Brawl
-$playersound      MoBall   male    *jump           QUIET
+$playersound      MoBall   male    *jump           SAMMJMP // Taken from Metroid Prime
 
 player/surface WTRLEAVE
 player/splash  WTRENTER
@@ -88,7 +88,7 @@ $volume sam/step2 0.35
 $volume sam/step3 0.35
 $volume sam/step4 0.35
 
-metroid/spacejump       SAMSDJMP // Taken from Smash Bros. Brawl
+metroid/spacejump       SAMJMP2 // Taken from Metroid Prime
 metroid/walljump        SAMSWJMP
 metroid/wajumpup        SAMSWJMU
 
