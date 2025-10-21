@@ -21,7 +21,10 @@ script "PlayerMovement" ENTER
 			WalkSwitch = FALSE;
 			
 		if( !GetUserVariable(0, "user_isdead")==1 && !GetUserVariable(0, "user_isplayerbusy")==1 )
-		{
+		{//int pinput = GetPlayerInput(-1, INPUT_BUTTONS);
+             //if((pinput & BT_MOVELEFT || pinput & BT_MOVERIGHT) && !(pinput & BT_FORWARD) && !(pinput & BT_BACK)) {
+             //PrintBold(s:"player is pressing left or right only");
+//}
 			if (WalkSwitch)
 			{
 				if (GetUserVariable(0, "user_isrunningback")==1)
