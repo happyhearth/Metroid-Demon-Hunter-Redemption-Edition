@@ -59,7 +59,7 @@ $playersound      MoBall   male    *grunt          QUIET
 $playeralias      MoBall   male    *land           samus/land
 $playersound      MoBall   male    *usefail        BALNOPE // Taken from Smash Bros. Brawl
 $playersound      MoBall   male    *taunt          BALTAUNT // Taken from Smash Bros. Brawl
-$playersound      MoBall   male    *jump           SAMMJMP // Taken from Metroid Prime
+$playersound      MoBall   male    *jump           QUIET // Taken from Metroid Prime
 
 player/surface WTRLEAVE
 player/splash  WTRENTER
