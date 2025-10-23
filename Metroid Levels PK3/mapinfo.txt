@@ -95,6 +95,6 @@ map ARRIVAL "Hexhi Wilds - Arrival" // By R4L
 map RLCSTA "Relic Station" //By Happy Heart
 {
    next = "METTEST"
-   music = "RLCSTA"
+   music = "M_RLCSTA"
    SKY1 = "HEXSKY01"
 }

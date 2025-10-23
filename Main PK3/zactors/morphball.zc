@@ -11,7 +11,7 @@ Class MorphBallPlayer : PlayerPawn
 		Player.JumpZ 0.01;
 		MaxStepHeight 12;
 		Player.Viewheight 21;
-		Player.ForwardMove .8, .8;
+		Player.ForwardMove .85, .85;
 		Player.SideMove 0.2, 0.2;
 		DamageFactor "NoDamage", 0.0;
 		DamageFactor "Drowning", 0.0;
