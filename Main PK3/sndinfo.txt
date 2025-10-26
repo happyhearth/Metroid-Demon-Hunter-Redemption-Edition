@@ -41,7 +41,7 @@ $playersounddup   Hunter   male    *pain50         *pain100
 $playersounddup   Hunter   male    *pain25         *pain100
 $playersound      Hunter   male    *grunt          QUIET
 $playeralias      Hunter   male    *land           samus/land
-$playersound      Hunter   male    *usefail        SAMNOPE // Taken from Smash Bros. Brawl
+$playersound      Hunter   male    *usefail        SAMNOP2 // Taken from Metroid Prime 3
 $playersound      Hunter   male    *taunt          SAMTAUNT // Taken from Smash Bros. Brawl
 $playersound      Hunter   male    *jump           SAMJMP1 // Taken from Metroid Prime
 
@@ -59,18 +59,35 @@ $playersound      MoBall   male    *grunt          QUIET
 $playeralias      MoBall   male    *land           samus/land
 $playersound      MoBall   male    *usefail        BALNOPE // Taken from Smash Bros. Brawl
 $playersound      MoBall   male    *taunt          BALTAUNT // Taken from Smash Bros. Brawl
-$playersound      MoBall   male    *jump           QUIET // Taken from Metroid Prime
+$playersound      MoBall   male    *jump           QUIET
 
 player/surface WTRLEAVE
 player/splash  WTRENTER
 
-moball/hurt             BALPAIN
+moball/hurt             MBALPAIN //Taken from Metroid Prime
 
-$random samus/hurt { sam/hurt1 sam/hurt2 sam/hurt3 sam/hurt4 } // Taken from Smash Bros. Brawl
-sam/hurt1               SAMHURT1
-sam/hurt2               SAMHURT2
-sam/hurt3               SAMHURT3
-sam/hurt4               SAMHURT4
+$random samus/hurt { sam/hurt1 sam/hurt2 sam/hurt3 sam/hurt4 sam/hurt5 sam/hurt6 } // Taken from Metroid Prime
+sam/hurt1               SAMOW1
+sam/hurt2               SAMOW1
+sam/hurt3               SAMOW1
+sam/hurt4               SAMOW1
+sam/hurt5               SAMOW2
+sam/hurt6               SAMOW3
+sam/hurt7               SAMOW6
+
+//$random samus/hurt2 {sam/hurt21 sam/hurt22 sam/hurt23 sam/hurt24 sam/hurt25 sam/hurt26 } //Taken from Metroid Prime
+//sam/hurt21              SAMOW1
+//sam/hurt22              SAMOW1
+//sam/hurt23              SAMOW1
+//sam/hurt24              SAMOW7
+//sam/hurt25              SAMOW9
+//sam/hurt26              SAMOW10
+
+//$random samus/hurt3 {sam/hurt31 sam/hurt32 sam/hurt33 sam/hurt34 } //Taken from Metroid Prime
+//sam/hurt31              SAMOW1
+//sam/hurt32              SAMOW1
+//sam/hurt33              SAMOW11
+//sam/hurt34              SAMOW12
 
 $random samus/land { sam/land1 sam/land2 sam/land3 } // Taken from Smash Bros. Brawl
 sam/land1               SAMLAND1
