@@ -15,7 +15,7 @@ Class MorphBallPlayer : PlayerPawn
 		Player.SideMove 0.2, 0.2;
 		DamageFactor "NoDamage", 0.0;
 		DamageFactor "Drowning", 0.0;
-		DamageFactor "Normal", 0.75;
+		DamageFactor "Normal", 1.25;
 		DamageFactor "Lava", 1;
 		RadiusDamageFactor 0.95;
 		Player.StartItem "BombCount", 3;
