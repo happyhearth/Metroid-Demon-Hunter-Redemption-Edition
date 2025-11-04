@@ -523,7 +523,7 @@ Class PlasmaBolt : Actor
 		+ROCKETTRAIL;
 		+FORCEXYBILLBOARD;
 		Speed 55;
-		Damage (8);
+		Damage (10);
 		Scale 0.01;
 		RenderStyle "Add";
 		Alpha 0.95;
@@ -663,7 +663,7 @@ Class PlasmaBoltCoop : PlasmaBolt
 { 
 	Default
 	{
-		Damage (12);
+		Damage (10);
 		Speed 45;
 		Scale 0.2;
 	}
@@ -1027,7 +1027,7 @@ Class PlasmaBoltCharged : Actor
 		+ROCKETTRAIL;
 		+FORCEXYBILLBOARD;
 		Speed 60;
-		Damage (30);
+		Damage (45);
 		Scale 0.3;
 		RenderStyle "Add";
 		Alpha 0.75;
@@ -1172,7 +1172,7 @@ Class PlasmaBoltChargedCoop : PlasmaBoltCharged
 	Default
 	{
 		+FORCEXYBILLBOARD;
-		Damage (30);
+		Damage (45);
 		Speed 55;
 		Scale 0.5;
 	}
@@ -1286,7 +1286,7 @@ Class PlasmaBoltHalfCharged : PlasmaBoltCharged
 		Radius 8;
 		Height 6;
 		Alpha 0.15;
-		Damage (16);
+		Damage (32);
 		Scale 0.01;
 	}
 }
@@ -1310,7 +1310,7 @@ Class PlasmaBoltHalfChargedCoop : PlasmaBoltChargedCoop
 		Radius 8;
 		Height 6;
 		Alpha 0.15;
-		Damage (16);
+		Damage (32);
 		Scale 0.01;
 	}
 }
