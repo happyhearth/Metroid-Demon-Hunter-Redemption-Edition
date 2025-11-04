@@ -13,8 +13,8 @@ Class SamusPlayer : PlayerPawn
 		Player.DisplayName "Hunter";
 		Player.StartItem "PowerBeam";
 		Player.StartItem "MorphBall";
-		Player.StartItem "MissileTankPickup";
 		Player.StartItem "ChargeBeamPickup";
+		Player.StartItem "MissileTankPickup";
 		//Player.StartItem "ScanVisor";
 		Player.StartItem "MissileStateCounter", 100;
 		Player.StartItem "ChargeDummy", 1;

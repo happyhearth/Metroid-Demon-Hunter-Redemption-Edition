@@ -938,7 +938,7 @@ Class SpazerBolt1Charged : SpazerBolt1
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		DamageType "SpazerCharged"; 
 		+FORCEXYBILLBOARD; 
 	}
@@ -948,7 +948,7 @@ Class SpazerBolt2Charged : SpazerBolt2
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		DamageType "SpazerCharged"; 
 		+FORCEXYBILLBOARD; 
 	}
@@ -958,7 +958,7 @@ Class SpazerBolt3Charged : SpazerBolt3
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		DamageType "SpazerCharged"; 
 		+FORCEXYBILLBOARD; 
 	}
@@ -968,7 +968,7 @@ Class SpazerBolt1CoopCharged : SpazerBolt1Coop
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES; 
 		+FORCEXYBILLBOARD; 
@@ -980,7 +980,7 @@ Class SpazerBolt2CoopCharged : SpazerBolt2Coop
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES; 
 		+FORCEXYBILLBOARD; 
@@ -992,7 +992,7 @@ Class SpazerBolt3CoopCharged : SpazerBolt3Coop
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES; 
 		+FORCEXYBILLBOARD; 
@@ -1004,7 +1004,7 @@ Class SpazerBoltCharged1 : SpazerBolt1Charged
 {
 	Default
 	{
-		DamageFunction(30);
+		DamageFunction(40);
 		-PAINLESS;
 		+FORCEXYBILLBOARD;
 	}
@@ -1024,7 +1024,7 @@ Class SpazerBoltCharged1Coop : SpazerBoltCharged1
 {
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player";
 		+THRUSPECIES;  
 	}
@@ -1034,7 +1034,7 @@ Class SpazerBoltCharged2 : SpazerBolt1Charged
 {
 	Default
 	{
-		DamageFunction(30);
+		DamageFunction(40);
 		-PAINLESS;
 		+FORCEXYBILLBOARD;
 	}
@@ -1054,7 +1054,7 @@ Class SpazerBoltCharged2Coop : SpazerBoltCharged2
 {
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES;  
 	}
@@ -1064,7 +1064,7 @@ Class SpazerBoltCharged3 : SpazerBolt1Charged
 {
 	Default
 	{
-		DamageFunction(30);
+		DamageFunction(40);
 		-PAINLESS;
 		+FORCEXYBILLBOARD;
 	}
@@ -1084,7 +1084,7 @@ Class SpazerBoltCharged3Coop : SpazerBoltCharged3
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES;
 	}
@@ -1094,7 +1094,7 @@ Class SpazerBoltCharged4 : SpazerBolt1Charged
 {
 	Default
 	{
-		DamageFunction(30);
+		DamageFunction(40);
 		-PAINLESS;
 		+FORCEXYBILLBOARD;
 	}
@@ -1114,7 +1114,7 @@ Class SpazerBoltCharged4Coop : SpazerBoltCharged4
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES;  
 	}
@@ -1124,7 +1124,7 @@ Class SpazerBoltCharged5 : SpazerBolt1Charged
 {
 	Default
 	{
-		DamageFunction(30);
+		DamageFunction(40);
 		-PAINLESS;
 		+FORCEXYBILLBOARD;
 	}
@@ -1144,7 +1144,7 @@ Class SpazerBoltCharged5Coop : SpazerBoltCharged5
 { 
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES;
 	}
@@ -1154,7 +1154,7 @@ Class SpazerBoltCharged6 : SpazerBolt1Charged
 {
 	Default
 	{
-		DamageFunction(30);
+		DamageFunction(40);
 		-PAINLESS;
 		+FORCEXYBILLBOARD;
 	}
@@ -1174,7 +1174,7 @@ Class SpazerBoltCharged6Coop : SpazerBoltCharged6
 {
 	Default
 	{
-		DamageFunction(32); 
+		DamageFunction(40); 
 		Species "Player"; 
 		+THRUSPECIES;  
 	}
@@ -1186,7 +1186,7 @@ Class SpazerBoltHalfCharged : SpazerBolt1
 {
 	Default
 	{
-		DamageFunction(20);
+		DamageFunction(25);
 		Species "Player";
 		+THRUSPECIES;
 		+FORCEXYBILLBOARD;

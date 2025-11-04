@@ -18,8 +18,8 @@ Class MorphBallPlayer : PlayerPawn
 		DamageFactor "Normal", 1.25;
 		DamageFactor "Lava", 1;
 		RadiusDamageFactor 0.95;
-		Player.StartItem "MissileTankPickup;
 		Player.StartItem "BombCount", 3;
+		Player.StartItem "MissileTankPickup";
 		Player.SoundClass "MoBall";
 		Player.DisplayName "MorphBall";
 		Player.MorphWeapon "Bombs";
