@@ -544,7 +544,7 @@ Class WaveBolt : Actor
 		BounceFactor 0.9;
 		WallBounceFactor 0.9;
 		Speed 40;
-		DamageFunction int(8 * frandom(1,3));
+		DamageFunction int(6 * frandom(1,3));
 		Scale 0.5;
 		RenderStyle "Add";
 		Alpha 0.75;
@@ -710,7 +710,7 @@ Class WaveBoltCoop : WaveBolt
 { 
 	Default
 	{
-		DamageFunction int(8 * frandom(1,3));
+		DamageFunction int(6 * frandom(1,3));
 		Species "Player"; 
 		+THRUSPECIES; 
 		+FORCEXYBILLBOARD;
@@ -1002,7 +1002,7 @@ Class WaveBoltCharged : Actor
 		WallBounceFactor 0.75;
 		BounceCount 3;
 		Speed 30;
-		DamageFunction int(15 * frandom(1,4));
+		DamageFunction int(32 * frandom(1,4));
 		Scale 0.65;
 		RenderStyle "Add";
 		Alpha 0.75;
@@ -1075,7 +1075,7 @@ Class WaveBoltChargedCoop : WaveBoltCharged
 {
 	Default
 	{
-		DamageFunction int(42 * frandom(1,3));
+		DamageFunction int(32 * frandom(1,3));
 		Species "Player";
 		+THRUSPECIES;
 		+FORCEXYBILLBOARD
@@ -1096,7 +1096,7 @@ Class WaveBoltCharged2Coop : WaveBoltCharged2
 {
 	Default
 	{
-		DamageFunction int(42 * frandom(1,3));
+		DamageFunction int(32 * frandom(1,3));
 		Species "Player";
 		+THRUSPECIES;
 		+FORCEXYBILLBOARD;
@@ -1117,7 +1117,7 @@ Class WaveBoltCharged3Coop : WaveBoltCharged3
 {
 	Default
 	{
-		DamageFunction int(42 * frandom(1,3));
+		DamageFunction int(32 * frandom(1,3));
 		Species "Player";
 		+THRUSPECIES;
 		+FORCEXYBILLBOARD;
@@ -1140,7 +1140,7 @@ Class WaveSplatterShot : Actor
 	{
 		Radius 8;
 		Height 6;
-		DamageFunction int(6 * frandom(1,4));
+		DamageFunction int(8 * frandom(1,4));
 		Speed 20;
 		Scale 0.2;
 		Renderstyle "Add";
@@ -1217,7 +1217,7 @@ Class WaveBoltHalfCharged : WaveBoltCharged
 		Radius 10;
 		Height 6;
 		Speed 30;
-		DamageFunction int(26 * frandom(1,4));
+		DamageFunction int(24 * frandom(1,3));
 		Scale 0.35;
 		+FORCEXYBILLBOARD;
 	}
