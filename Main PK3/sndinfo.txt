@@ -56,7 +56,7 @@ $playersounddup   MoBall   male    *pain75         *pain100
 $playersounddup   MoBall   male    *pain50         *pain100
 $playersounddup   MoBall   male    *pain25         *pain100
 $playersound      MoBall   male    *grunt          QUIET
-$playeralias      MoBall   male    *land           samus/land
+$playeralias      MoBall   male    *land           morphball/land
 $playersound      MoBall   male    *usefail        BALNOPE // Taken from Smash Bros. Brawl
 $playersound      MoBall   male    *taunt          BALTAUNT // Taken from Smash Bros. Brawl
 $playersound      MoBall   male    *jump           QUIET
@@ -93,6 +93,8 @@ $random samus/land { sam/land1 sam/land2 sam/land3 } // Taken from Smash Bros. B
 sam/land1               SAMLAND1
 sam/land2               SAMLAND2
 sam/land3               SAMLAND3
+
+morphball/land          SAMMLAND
 
 $random samus/step { sam/step1 sam/step2 sam/step3 sam/step4 } // Taken from Unreal Championship 2
 sam/step1               SAMSTEP1
