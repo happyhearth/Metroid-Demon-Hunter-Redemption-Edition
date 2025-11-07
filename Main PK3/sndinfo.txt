@@ -299,10 +299,23 @@ $limit GNSHJETS 0
 pirate/shot             PIRTSHOT
 pirate/hit              PIRTHIT
 pirate/land             PIRTLAND // Taken from Painkiller
-pirate/see              PIRTSEE // Taken from Painkiller
-pirate/pain             PIRTPAIN // Taken from Painkiller
-pirate/death            PIRTDETH // Taken from Painkiller
-pirate/idle             PIRTIDLE // Taken from Painkiller
+pirate/see              SPSEE // Taken from Metroid Prime
+pirate/pain             SPPAIN // Taken from Metroid Prime
+pirate/death            SPDETH // Taken from Metroid Prime
+pirate/idle             SPIDLE // Taken from Metroid Prime
+
+$random pirate/see { pirate/see1 pirate/see2 }
+pirate/see1             SPSEE
+pirate/see2             SPEEE2
+
+$random pirate/death { pirate/death1 pirate/death2 }
+pirate/death1           SPDETH
+pirate/death2           SPDETH2
+
+$random pirate/idle { pirate/idle1 pirate/idle2 pirate/idle3 }
+pirate/idle1            SPCHASE
+pirate/idle2            SPCHASE2
+pirate/idle3            SPCHASE3
 
 // Red Prince
 $random prince/active { inqv1 inqv2 inqv3 inqv4 inqv5 inqv6 inqv7 inqv8 inqv9 inqv10 } // Taken from the Dark Inquisitor on Realm667
