@@ -14,16 +14,17 @@ maps
 			resource0
 			{
 				type = 2;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\gzdoom.pk3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\uzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 1;
+				requiredarchives = "gzdoom";
 			}
 			
 			resource1
 			{
 				type = 0;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\DOOM2.WAD";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\DOOM2.WAD";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -33,7 +34,7 @@ maps
 			resource2
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Main PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Main PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -43,7 +44,7 @@ maps
 			resource3
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Metroid Levels PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Metroid Levels PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -53,7 +54,7 @@ maps
 			resource4
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Scans PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Scans PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -77,9 +78,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -2585.287f;
-		viewpositiony = 1851.15f;
-		viewscale = 0.08157276f;
+		viewpositionx = -606.5102f;
+		viewpositiony = 1334.379f;
+		viewscale = 0.3028733f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -90,7 +91,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 512;
+			gridsize = 128;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -143,8 +144,6 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 806;
-				firstvisibleline = 21;
 				activetab = true;
 			}
 		}
