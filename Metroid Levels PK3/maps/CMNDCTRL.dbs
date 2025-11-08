@@ -165,7 +165,7 @@ maps
 			resource0
 			{
 				type = 2;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\gzdoom.pk3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\uzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 1;
@@ -175,7 +175,7 @@ maps
 			resource1
 			{
 				type = 0;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\DOOM2.WAD";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\DOOM2.WAD";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -185,7 +185,7 @@ maps
 			resource2
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Main PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Main PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -195,7 +195,7 @@ maps
 			resource3
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Metroid Levels PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Metroid Levels PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -205,7 +205,7 @@ maps
 			resource4
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\gzdoom-4-14-2-windows\\MDH Redemption Edition\\Scans PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Scans PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
