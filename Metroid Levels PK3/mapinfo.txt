@@ -97,6 +97,7 @@ map RLCSTA "Relic Station" //By Happy Heart
    next = "METTEST"
    music = "M_RLCSTA"
    SKY1 = "HEXSKY01"
+   MissilesActivateImpactLines
 }
 
 map CMNDCTRL "Command Central" //By Happy Heart
