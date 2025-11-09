@@ -212,8 +212,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -470.6599f;
-		viewpositionx = 1158.146f;
+		viewpositiony = -485.864f;
+		viewpositionx = 1165.748f;
 		
 		testprecommand
 		{
@@ -290,7 +290,7 @@ maps
 				tabtype = 0;
 				scripttype = 1;
 				caretposition = 10779;
-				firstvisibleline = 417;
+				firstvisibleline = 399;
 				activetab = true;
 			}
 		}

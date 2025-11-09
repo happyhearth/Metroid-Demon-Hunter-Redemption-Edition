@@ -24,7 +24,7 @@ Class SamusPlayer : PlayerPawn
 		Player.StartItem "PlayerTotalPowerBombs", 0;
 		Player.StartItem "PowerBombAcquired", -1;
 		Player.StartItem "PowerBombAmmo", 0;
-		Player.StartItem "MissileAmmo", 5;
+		Player.StartItem "MissileAmmo", 0;
 		Player.StartItem "CombatVisorAcquired", 1;
 		Player.StartItem "BombCount", 3;
 		Player.StartItem "Health100", 100;
