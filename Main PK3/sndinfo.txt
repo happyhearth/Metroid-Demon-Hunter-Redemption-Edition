@@ -304,9 +304,10 @@ pirate/pain             SPPAIN // Taken from Metroid Prime
 pirate/death            SPDETH // Taken from Metroid Prime
 pirate/idle             SPIDLE // Taken from Metroid Prime
 
-$random pirate/see { pirate/see1 pirate/see2 }
+$random pirate/see { pirate/see1 pirate/see2 pirate/see3 }
 pirate/see1             SPSEE
-pirate/see2             SPEEE2
+pirate/see2             SPSEE2
+pirate/see3             SPSEE3
 
 $random pirate/death { pirate/death1 pirate/death2 }
 pirate/death1           SPDETH
@@ -383,4 +384,5 @@ Energy50/Pickup GENPCK
 
 // Ammo Pickup
 MissileAmmo/Pickup MISPCK
+SuperMissileAmmo/Pickup SMISPCK
 PowerBombAmmo/Pickup PBPCK

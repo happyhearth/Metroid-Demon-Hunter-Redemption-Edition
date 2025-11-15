@@ -20,7 +20,7 @@ Class MissileAmmo : Ammo replaces Shell
 	Default
 	{
 		//$Category Metroid
-		Inventory.PickupMessage "Picked up a Missile.";
+		Inventory.PickupMessage "Picked up small Missile ammo.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
 		Inventory.Amount 2;
 		Inventory.MaxAmount 5; //Originally 5
@@ -62,7 +62,7 @@ Class MissileAmmoPack : MissileAmmo
 	Default
 	{
 		//$Category Metroid
-		Inventory.PickupMessage "Picked up a Missile Pack.";
+		Inventory.PickupMessage "Picked up medium Missile ammo.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
 		Inventory.Amount 5;
 		Inventory.MaxAmount 5; //Originally 5
@@ -96,7 +96,7 @@ Class MissileAmmo_Dropped : MissileAmmo
 {
 	Default
 	{
-		Inventory.PickupMessage "Picked up a Missile.";
+		Inventory.PickupMessage "Picked up small Missile ammo.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
 		Inventory.Icon "MPKUA0";
 		+NOGRAVITY;
@@ -165,7 +165,7 @@ Class MissileAmmoPack_Dropped : MissileAmmoPack
 {
 	Default
 	{
-		Inventory.PickupMessage "Picked up a Missile Pack.";
+		Inventory.PickupMessage "Picked up medium Missile ammo.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
 		+NOGRAVITY;
 		+DONTTHRUST;
@@ -231,7 +231,7 @@ Class SuperMissileAmmo : Ammo
 	{
 		//$Category Metroid;
 		Inventory.PickupMessage "Picked up a Super Missile.";
-		Inventory.PickupSound "item/get";
+		Inventory.PickupSound "SuperMissileAmmo/Pickup";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 0;
 		Ammo.BackpackAmount 1;
@@ -273,7 +273,7 @@ Class SuperMissileAmmo_Dropped : SuperMissileAmmo
 	Default
 	{
 		Inventory.PickupMessage "Picked up a Super Missile.";
-		Inventory.PickupSound "item/get";
+		Inventory.PickupSound "SuperMissileAmmo/Pickup";
 		Scale 1.1;
 		+NOGRAVITY;
 		+Inventory.IGNORESKILL;
@@ -878,6 +878,7 @@ Class MissileTankPickup : CustomInventory
 		Inventory.PickupMessage "";
 		Inventory.PickupSound "none_at_all";
 		+Inventory.AUTOACTIVATE;
+		Scale .15;
 		+DONTGIB;
 		+NOGRAVITY;
 		//+SHOOTABLE;
@@ -888,9 +889,8 @@ Class MissileTankPickup : CustomInventory
     States
     {
 	  Spawn:
-	    TNT1 A 0 NoDelay A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
-        MTNK S 20;
-        MTNK ABCDEFGHIJKLMNOPQRS 1 BRIGHT;
+	    MTNK A 20 NoDelay A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
+        MTNK A 20 BRIGHT;
         Loop;
 
       Pickup:
