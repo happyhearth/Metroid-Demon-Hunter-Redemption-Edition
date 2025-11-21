@@ -118,7 +118,7 @@ script "METROID_DOOR" (int DoorLine, int color)
 	{
 		dx = x-GetActorX(ActivatorTID());
 		dy = y-GetActorY(ActivatorTID());
-		if(Abs(dx)+Abs(dy) < 500<<16)//500
+		if(Abs(dx)+Abs(dy) < 160<<16)//500
 		{
 			if(i < 16)
 			{

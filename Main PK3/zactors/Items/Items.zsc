@@ -889,8 +889,9 @@ Class MissileTankPickup : CustomInventory
     States
     {
 	  Spawn:
-	    MTNK A 20 NoDelay A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
-        MTNK A 20 BRIGHT;
+	    TNT1 A 0 NoDelay A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
+		MTNK ABCDEFGHIJKLMNOPQRSTUVWXYZ 1;
+        MTNK ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT;
         Loop;
 
       Pickup:
