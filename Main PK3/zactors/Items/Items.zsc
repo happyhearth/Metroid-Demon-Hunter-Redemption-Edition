@@ -870,6 +870,39 @@ Class EnergyTankPickup : CustomInventory replaces Megasphere
     }
 }
 
+class Utils
+{
+    static bool CheckPlayersHave(class<Inventory> itm, bool checkall = false)
+    {
+        bool found = checkall;
+        for (int pn = 0; pn < MAXPLAYERS; pn++) {
+            if (!playerInGame[pn])
+                continue;
+            
+            PlayerInfo plr = players[pn];
+            if (!plr || !plr.mo)
+                continue;
+                
+            bool hasItem = plr.mo.CountInv(itm);
+            
+            if (!checkall)
+            {
+                if (hasItem)
+                {
+                    found = true;
+                    break;
+                }
+            }
+            else if (!hasItem)
+            {
+                found = false;
+                break;
+            }
+        }
+        return found;
+    }
+}
+
 Class MissileTankPickup : CustomInventory
 {
 	Default
@@ -889,9 +922,15 @@ Class MissileTankPickup : CustomInventory
     States
     {
 	  Spawn:
-	    TNT1 A 0 NoDelay A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
-		MTNK ABCDEFGHIJKLMNOPQRSTUVWXYZ 1;
+        TNT1 A 0 NoDelay A_JumpIf(Utils.CheckPlayersHave('MissileTankAcquired', true), 'Spawn2');
+        TNT1 A 0 A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
+        MTNK ABCDEFGHIJKLMNOPQRSTUVWXYZ 1;
         MTNK ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT;
+        Loop;
+
+      Spawn2:
+        TNT1 A 0 A_StartSound("Upgrade/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.5);
+        MEXP ABCDEFGHIJKLMNOPQRSTUVWXYZ 1;
         Loop;
 
       Pickup:
