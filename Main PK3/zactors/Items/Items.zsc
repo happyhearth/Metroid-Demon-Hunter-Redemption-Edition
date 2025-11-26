@@ -26,6 +26,7 @@ Class MissileAmmo : Ammo replaces Shell
 		Inventory.MaxAmount 5; //Originally 5
 		Ammo.BackpackAmount 2;
 		Ammo.BackpackMaxAmount 5;
+		Scale 0.06;
 		Inventory.Icon "MPKUA0";
 		+NOGRAVITY;
 		Tag "Missile";
@@ -40,9 +41,8 @@ Class MissileAmmo : Ammo replaces Shell
 		
 	  Spawn2:
 	    TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
-		TNT1 A 1 { bSPECIAL = 1; }//A_ChangeFlag("SPECIAL", 1);
-		MPKU A 10 BRIGHT;
-        MPKU B 4 BRIGHT;
+		TNT1 A 0 { bSPECIAL = 1; }//A_ChangeFlag("SPECIAL", 1);
+		MAM2 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT;
 		loop;
 		
 	  SpawnPack:
@@ -68,6 +68,7 @@ Class MissileAmmoPack : MissileAmmo
 		Inventory.MaxAmount 5; //Originally 5
 		Ammo.BackpackAmount 5;
 		Ammo.BackpackMaxAmount 5;
+		Scale 0.07;
 		+NOGRAVITY;
 		Tag "Missile Pack";
 	}
@@ -79,9 +80,8 @@ Class MissileAmmoPack : MissileAmmo
 		
 	  Spawn2:
 	    TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
-		TNT1 A 1 { bSPECIAL = 1; } //A_ChangeFlag("SPECIAL", 1);
-		MPPU A 10 BRIGHT;
-        MPPU B 4 BRIGHT;
+		TNT1 A 0 { bSPECIAL = 1; } //A_ChangeFlag("SPECIAL", 1);
+		MAM5 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT;
 		loop;
 	  
 	  NoSpawn:
@@ -99,6 +99,7 @@ Class MissileAmmo_Dropped : MissileAmmo
 		Inventory.PickupMessage "Picked up small Missile ammo.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
 		Inventory.Icon "MPKUA0";
+		Scale 0.06;
 		+NOGRAVITY;
 		+DONTTHRUST;
 	}
@@ -107,13 +108,12 @@ Class MissileAmmo_Dropped : MissileAmmo
 	  Spawn:
 		TNT1 A 0 NoDelay A_Jump(15, "SpawnPack");
         TNT1 A 1 ACS_ExecuteAlways(594,0,30);
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(594,37) != 1, "NoSpawn");
+		TNT1 A 1 A_JumpIf(ACS_ExecuteWithResult(594,37) != 1, "NoSpawn");
       Spawn2:
         TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
 		TNT1 A 0 A_JumpIfInventory("Health100",70,"RemoveCheck");
-		TNT1 A 1 { bSPECIAL = 1; } //A_ChangeFlag("SPECIAL", 1);
-        MPKU A 10 BRIGHT A_GiveInventory("Health100",1);
-        MPKU B 4 BRIGHT;
+		TNT1 A 0 { bSPECIAL = 1; } //A_ChangeFlag("SPECIAL", 1);
+        MAM2 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT A_GiveInventory("Health100",1);
         Loop;
 		
 	  SpawnPack:
@@ -167,6 +167,7 @@ Class MissileAmmoPack_Dropped : MissileAmmoPack
 	{
 		Inventory.PickupMessage "Picked up medium Missile ammo.";
 		Inventory.PickupSound "MissileAmmo/Pickup";
+		Scale 0.07;
 		+NOGRAVITY;
 		+DONTTHRUST;
 	}
@@ -175,13 +176,12 @@ Class MissileAmmoPack_Dropped : MissileAmmoPack
 	  Spawn:
 		TNT1 A 0;
         TNT1 A 1 ACS_ExecuteAlways(594,0,30);
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(594,37) != 1, "NoSpawn");
+		TNT1 A 1 A_JumpIf(ACS_ExecuteWithResult(594,37) != 1, "NoSpawn");
       Spawn2:
         TNT1 A 0 NoDelay A_StartSound("Energy10/Ambient",CHAN_BODY,CHANF_LOOP|CHANF_NOSTOP,0.7);
 		TNT1 A 0 A_JumpIfInventory("Health100",70,"RemoveCheck");
-		TNT1 A 1 { bSPECIAL = 1; } //A_ChangeFlag("SPECIAL", 1);
-        MPPU A 10 BRIGHT A_GiveInventory("Health100",1);
-        MPPU B 4 BRIGHT;
+		TNT1 A 0 { bSPECIAL = 1; } //A_ChangeFlag("SPECIAL", 1);
+		MAM5 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 BRIGHT A_GiveInventory("Health100",1);
         Loop;
 		
       GiveGravity:
