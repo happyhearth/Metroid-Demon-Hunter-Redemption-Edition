@@ -78,7 +78,6 @@ skill easy
     ACSReturn = 1
     EasyBossBrain
     SpawnFilter = Easy
-	DamageFactor = 0.75
     Name = "Space Cadet"
     MustConfirm = "$CONFIRM_EASY"
 }
