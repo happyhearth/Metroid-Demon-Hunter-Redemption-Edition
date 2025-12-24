@@ -39,6 +39,7 @@ DoomEdNums
 	18704 = "ScanVisor"
 	18705 = "RedEnergyTankPickup"
 	18706 = "Energy50"
+	18707 = "EnergyFull"
 }
 
 gameinfo

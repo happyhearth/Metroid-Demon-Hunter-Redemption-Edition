@@ -86,6 +86,17 @@ map ARRIVAL "Hexhi Wilds - Arrival" // By R4L
 	MissilesActivateImpactLines
 }
 
+map ARRIVAL2 "Hexhi Wilds - Arrival" // By R4L
+{
+    next = "METTEST"
+	music = "HWLDSDAY"
+	SKY1 = "HEXSKY02", -0.03
+	SKY2 = "HEXSKY01", 0.01
+	SmoothLighting
+	DoubleSky
+	MissilesActivateImpactLines
+}
+
 /*map METDM04 "TUUUUUUBES" // By Unholypimpin
 {
     next = "METDM01"

@@ -381,8 +381,14 @@ Energy100/Ambient MP_ENAM
 Energy10/Pickup SENPCK
 Energy25/Pickup LENPCK
 Energy50/Pickup GENPCK
+EnergyFull/Pickup FENPCK
 
 // Ammo Pickup
 MissileAmmo/Pickup MISPCK
 SuperMissileAmmo/Pickup SMISPCK
 PowerBombAmmo/Pickup PBPCK
+
+// Visors
+visor/select VISELECT
+visor/up VISUP
+visor/down VISDOWN
