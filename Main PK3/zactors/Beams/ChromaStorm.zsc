@@ -96,12 +96,18 @@ Class ChromaBeam : MDOBeam
 
       Select:
         TNT1 AAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Raise;
-        TNT1 A 1 A_Raise;
+		TNT1 A 1 A_Raise;
         Loop;
 
       Deselect:
-        TNT1 A 0;
-        TNT1 A 0 A_StartSound("beam/deselect",5);
+        TNT1 A 0
+		{
+  if (player.pendingweapon == WP_NOCHANGE || !(player.pendingweapon is 'ScanVisor'))
+  {
+    A_StartSound("beam/deselect", 5);
+  }
+}
+        TNT1 A 0 A_StartSound("beam/deselect", 5);
       Deselect2:
         PBEM A 0 ACS_ExecuteWithResult(476, 0);
         TNT1 A 0 A_JumpIfInventory("DakkaBeamColor", 5, "PurpleDown");

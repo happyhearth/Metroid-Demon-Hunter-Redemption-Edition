@@ -390,5 +390,5 @@ PowerBombAmmo/Pickup PBPCK
 
 // Visors
 visor/select VISELECT
-visor/up VISUP
-visor/down VISDOWN
+visor/up VSLCTUP
+visor/down VSLCTDWN
