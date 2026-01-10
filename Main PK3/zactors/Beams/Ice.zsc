@@ -121,7 +121,7 @@ Class IceBeam : MDOBeam
 
 	  Deselect:
         IBEM A 0 ACS_ExecuteWithResult(476, 0);
-        TNT1 A 0 A_StartSound("beam/deselect",5);
+        TNT1 A 0 ScanVisorSound();
       Deselect2:
         IBEM RSTUVW 1 A_WeaponReady(WRF_NOFIRE | WRF_NOSWITCH);
         TNT1 A 0 A_JumpIfHealthLower(1, "DeadLower");

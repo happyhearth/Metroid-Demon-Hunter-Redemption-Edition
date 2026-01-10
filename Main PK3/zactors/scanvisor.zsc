@@ -65,31 +65,24 @@ Class ScanVisorWeapon : Weapon
 	States
 	{		
 	Select:
-        TNT1 A 0 A_WeaponOffset(0, WEAPONTOP);
-		TNT1 A 0 A_StartSound("visor/up",0);
-		goto Ready;
+		TNT1 A 0 //anonymous function to play the visor select and up sounds and avoid using A_Raise
+		{
+			A_StartSound("visor/select", CHAN_AUTO);
+			A_StartSound("visor/up", CHAN_AUTO);
+			A_WeaponOffset(0, WEAPONTOP);
+		}
+		Goto Ready;
 	
 	Deselect:
 		TNT1 A 0 A_StartSound("visor/down",0);
 	    TNT1 AAAAAA 1 A_WeaponReady(WRF_NOFIRE | WRF_NOSWITCH);
         TNT1 A 0 A_JumpIfHealthLower(1, "DeadLower");
         TNT1 A 5 A_WeaponReady(WRF_NOFIRE | WRF_NOSWITCH);
-	    APTR J 1 Offset(0,140);
-        APTR J 1 Offset(0,130);
-        APTR J 1 Offset(0,120);
-        APTR J 1 Offset(0,110);
-        APTR J 1 Offset(0,100);
-        APTR J 1 Offset(0,90);
-        APTR J 1 Offset(0,80);
-        APTR J 1 Offset(0,70);
-        APTR J 1 Offset(0,60);
-        APTR J 1 Offset(0,50);
-        APTR J 1 Offset(0,40);
+	    APTR J 1 Offset(0,140); //this line and the next handles the "lowering" of the "weapon"
         TNT1 A 0 Offset(0,32);
-		//XBEM AAAAAAAAAAAA 1 A_WeaponOffset(0.0, 0.0, WOF_INTERPOLATE | WOF_ADD)
-		TNT1 A 0 A_ZoomFactor(1.0);
+		TNT1 A 0 A_ZoomFactor(1.0); //change zoom effect from the Scan Visor back to normal for the beams
 		TNT1 A 0 ACS_ExecuteAlways(605,0,1);
-        TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_Lower;
+        TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_Lower; //this needs to stay unmodified or else the Scan Visor won't properly exit
         APTR J 0 A_Lower;
         loop;
 		

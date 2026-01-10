@@ -44,6 +44,17 @@ Class MDOBeam : Weapon abstract
 		}
     }
 	
+	//thanks Agent_Ash for this!
+	//this function checks if the next weapon to switch to is not the Scan Visor and plays the beam deselect sound instead.
+	//this was made so that the Scan Visor could have separate select/deselect sounds from the beams
+	action void ScanVisorSound()
+	{
+		if (player.pendingweapon == WP_NOCHANGE || !(player.pendingweapon is 'ScanVisorWeapon'))
+		{
+			A_StartSound("beam/deselect", 5);
+		}
+	}
+	
 	action void A_PSPFadeOut(double factor)
     {
         if (!player)

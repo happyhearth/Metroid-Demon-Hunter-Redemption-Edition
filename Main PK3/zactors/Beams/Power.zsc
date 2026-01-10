@@ -71,7 +71,7 @@ Class PowerBeam : MDOBeam
 		
 	  Deselect:
         PBEM A 0 ACS_ExecuteWithResult(476, 0);
-        TNT1 A 0 A_StartSound("beam/deselect",5);
+        TNT1 A 0 ScanVisorSound();
 		TNT1 A 0 {
 			invoker.missileCooldown = 0; //Override missile transition timer since we're firing normally
 			invoker.missilesOn = false;  //and don't need the animation to play
