@@ -165,7 +165,7 @@ maps
 			resource0
 			{
 				type = 2;
-				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\uzdoom.pk3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows-UZDoom-4.14.3\\uzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 1;
@@ -175,7 +175,7 @@ maps
 			resource1
 			{
 				type = 0;
-				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\DOOM2.WAD";
+				location = "C:\\Users\\hunte\\Downloads\\Windows-UZDoom-4.14.3\\DOOM2.WAD";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -185,7 +185,7 @@ maps
 			resource2
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Main PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows-UZDoom-4.14.3\\Main PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -195,7 +195,7 @@ maps
 			resource3
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Metroid Levels PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows-UZDoom-4.14.3\\Metroid Levels PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -205,15 +205,15 @@ maps
 			resource4
 			{
 				type = 1;
-				location = "C:\\Users\\hunte\\Downloads\\Windows--x86_64\\MDH Redemption Edition\\Scans PK3";
+				location = "C:\\Users\\hunte\\Downloads\\Windows-UZDoom-4.14.3\\Scans PK3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -317.0143f;
-		viewpositionx = 930.5482f;
+		viewpositiony = -1088.309f;
+		viewpositionx = 84.50536f;
 		
 		testprecommand
 		{
@@ -233,11 +233,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 64;
+			gridsize = 16;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.6156274f;
+		viewscale = 2.971507f;
 		
 		reloadresourceprecommand
 		{
