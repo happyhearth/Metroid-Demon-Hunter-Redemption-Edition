@@ -66,7 +66,7 @@ player/splash  WTRENTER
 
 moball/hurt             MBALPAIN //Taken from Metroid Prime
 
-$random samus/hurt { sam/hurt1 sam/hurt2 sam/hurt3 sam/hurt4 sam/hurt5 sam/hurt6 } // Taken from Metroid Prime
+$random samus/hurt { sam/hurt1 sam/hurt2 sam/hurt3 sam/hurt4 sam/hurt5 sam/hurt6 sam/hurt7 } // Taken from Metroid Prime
 sam/hurt1               SAMOW1
 sam/hurt2               SAMOW1
 sam/hurt3               SAMOW1

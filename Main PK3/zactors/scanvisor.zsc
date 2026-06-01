@@ -67,8 +67,6 @@ Class ScanVisorWeapon : Weapon
 	Select:
 		TNT1 A 0 //anonymous function to play the visor select and up sounds and avoid using A_Raise
 		{
-			A_StartSound("visor/select", CHAN_AUTO);
-			A_StartSound("visor/up", CHAN_AUTO);
 			A_WeaponOffset(0, WEAPONTOP);
 		}
 		Goto Ready;
