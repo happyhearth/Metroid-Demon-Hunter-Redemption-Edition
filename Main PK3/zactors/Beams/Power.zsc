@@ -151,14 +151,14 @@ Class PowerBeam : MDOBeam
 			A_WeaponReady(WRF_NOSECONDARY|WRF_NOPRIMARY|WRF_NOSWITCH);
 			}
         TNT1 A 0 A_Light0;
-        PBFI C 3  {
+        PBFI C 2  {
 			A_OverlayOffset(PSP_MDOFlash, 1, 10, WOF_ADD);
 			A_WeaponOffset(2, 20, WOF_ADD);
 			A_WeaponReady(WRF_NOSWITCH);
 			}
         TNT1 A 0 A_Light0;
 		TNT1 A 0 {
-			if(invoker.burstCount <= 3)
+			if(invoker.burstCount <= 1)
 			{
 				invoker.burstCount++;
 				return ResolveState("Fire");
