@@ -2,6 +2,9 @@ Class PowerBeam : MDOBeam
 {	
 	bool missilesOn;
 	int missileCooldown;
+	int idleTimer;
+	int burstCount;
+	const IDLE_MAX = 3 * 35; // 3 seconds in tics
 	array <Actor> seekerTargets; //for storm missiles
 	
 	enum PBLayers // OH SHIT SON WE GOT PSPRITES UP IN THIS B
@@ -19,6 +22,31 @@ Class PowerBeam : MDOBeam
 		Weapon.SelectionOrder 3000;  
 		Weapon.SlotNumber 1;
 		Inventory.Icon "WEAPPWBM";
+	}
+	
+	override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        idleTimer = IDLE_MAX;
+        burstCount = 0;
+    }
+	
+	override void Tick()
+	{
+		super.Tick();
+		if (owner && owner.player)
+        {
+            // Reset burst count if player stops firing for 3 seconds
+            if (idleTimer > 0)
+            {
+                idleTimer--;
+                if (idleTimer == 0)
+                {
+                    burstCount = 0; // Reset burst capability
+                    //Console.Printf("3 seconds idle: Rapid burst ready!");
+                }
+            }
+        }
 	}
 	
     States
@@ -93,7 +121,10 @@ Class PowerBeam : MDOBeam
         TNT1 A 0 A_JumpIfInventory("IceBeamChilled",1,"FireChilled");
         TNT1 A 0 A_StartSound("pbeam/fire", CHAN_WEAPON);
         TNT1 A 0 A_Recoil(0.05);
-        TNT1 A 0 A_FireProjectile("PowerBolt",random(20,200)/100.00,0,12,0,0,random(20,50)/100.00);
+        TNT1 A 0 {
+			invoker.idleTimer = invoker.IDLE_MAX;
+			A_FireProjectile("PowerBolt",random(20,200)/100.00,0,12,0,0,random(20,50)/100.00);
+			}
 		TNT1 A 0 {
 			invoker.missileCooldown = 0; //Override missile transition timer since we're firing normally
 			invoker.missilesOn = false;  //and don't need the animation to play
@@ -126,6 +157,17 @@ Class PowerBeam : MDOBeam
 			A_WeaponReady(WRF_NOSWITCH);
 			}
         TNT1 A 0 A_Light0;
+		TNT1 A 0 {
+			if(invoker.burstCount <= 3)
+			{
+				invoker.burstCount++;
+				return ResolveState("Fire");
+			}
+			else
+			{
+				return ResolveState(null);
+			}
+		}
         PBFI D 2  {
 			A_OverlayOffset(PSP_MDOFlash, 0, 1, WOF_ADD);
 			A_WeaponOffset(0, 16, WOF_ADD);

@@ -50,9 +50,9 @@ Class MDOBeam : Weapon abstract
 	action void ScanVisorSound()
 	{
 		if (player.pendingweapon == WP_NOCHANGE || !(player.pendingweapon is 'ScanVisorWeapon'))
-		{
 			A_StartSound("beam/deselect", 5);
-		}
+		else
+			A_StartSound("visor/up");
 	}
 	
 	action void A_PSPFadeOut(double factor)
