@@ -1,6 +1,7 @@
 Class MDOBeam : Weapon abstract
 {
 	const PSP_WB = -100;
+	int burstCount;
 	
 	// Thanks to Lewisk3 for the help with this. Fuck vectors.
 	action void TheSucc()
@@ -55,6 +56,39 @@ Class MDOBeam : Weapon abstract
 			A_StartSound("visor/up");
 	}
 	
+	// Thank you to Lewisk3 for the help with this.
+	// gives A_BurstFire that you can use in weapons to give them bursts.
+	// ex: TNT1 A 0 A_BurstFire();
+	// See powerbeam FireFinish state for example.
+	action State A_BurstFire(int shots)
+	{
+		// pointer to the met_burstfire cvar
+		CVar met_burstshot = CVar.GetCVar("met_burstshot", player);
+		
+		// check if this cvar is enabled first
+		if(met_burstshot)
+		{
+			// get pointers to the weapon's fire state and null checking
+			State metFire = ResolveState("Fire");
+			State fallback = ResolveState(null);
+			
+			// null check
+			if (!metFire) return fallback;
+			
+			// once we've reached 2 shots, reset the count and continue with the rest of the weapon states
+			if(invoker.burstCount == shots)
+			{
+				invoker.burstCount = 1;
+				return fallback;
+			}
+
+			// otherwise increase burst count and go back to the Fire state
+			invoker.burstCount++;
+			return metFire;
+		}
+		return null;
+	}
+	
 	action void A_PSPFadeOut(double factor)
     {
         if (!player)
@@ -77,6 +111,13 @@ Class MDOBeam : Weapon abstract
         {
             psp.Destroy();
         }
+    }
+	
+	// Set up some variables before the playsim is active.
+	override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        burstCount = 1;
     }
 
     override void DoEffect()
