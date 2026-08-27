@@ -2158,7 +2158,7 @@ Class GrappleBeamPickup : CustomInventory
 
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("GrappleBeamAcquired", 1, "Nope");
-		TNT1 A 0 ACS_ExecuteWithResult(594, 20, 15);
+		TNT1 A 0 ACS_ExecuteWithResult(594, 20, 30);
 		TNT1 A 0 A_GiveInventory("GrappleBeamAcquired", 1);
 		TNT1 A 1 A_SetBlend("White", 0.5, 5);
 		TNT1 A 0;

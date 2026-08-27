@@ -241,6 +241,7 @@ int BigPickupMsgFonts[PICKUPTYPES] =
 	"BNRHIJMP",
 	"BNRSNVSR",
 	"BNRGRAVS",
+	"BNRGRAPL",
 };
 
 // [R4L] Again, new items means new entries. This array defines what sound your pickup uses.

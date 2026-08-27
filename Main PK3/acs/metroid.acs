@@ -69,6 +69,7 @@ int GotBoostBall;
 int GotHiJump;
 int GotScan;
 int GotGravity;
+int GotGrapple;
 
 // CVAR HANDLING SHIT
 // ==================
@@ -1820,6 +1821,11 @@ script METROID_DECORATE (int which, int a1, int a2)
 		
 	case 58:
 		if (isSinglePlayer() && GotPowerBomb == 1) { SetResultValue(1); }
+        else { SetResultValue(0); }
+        break;
+		
+	case 59:
+        if (isSinglePlayer() && GotGrapple == 1) { SetResultValue(1); }
         else { SetResultValue(0); }
         break;
     }
